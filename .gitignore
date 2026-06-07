@@ -1,0 +1,27 @@
+# Build artifacts
+build/
+dist/
+*_Output.txt
+*_Symbols.txt
+_FileInformation.txt
+
+# MAME state -- corralled into a single dir by Makefile overrides.
+# The bare names handle the case where MAME is launched without the
+# overrides (e.g. by hand) and falls back to defaults in cwd.
+.mame-state/
+cfg/
+nvram/
+sta/
+snap/
+diff/
+inp/
+comments/
+mame.ini
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
