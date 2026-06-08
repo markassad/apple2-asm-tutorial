@@ -38,17 +38,17 @@ auto-launches at boot.)
 | # | Stage | Source | Concepts introduced |
 |---|---|---|---|
 | 1 | [Anatomy of a SYS file](01-anatomy/README.md) | `src/HELLO.S` | ProDOS SYS files, the `ORG`/`TYP`/`DSK` directives, EQUates, `ASC`, the high-bit ASCII trick, calling ROM (`COUT`) |
-| 2 | The text screen | `src/FILL.S` | The `$0400-$07FF` text page, the interleaved row layout, screen holes, `BASCALC`, direct writes via `(BASL),Y` |
-| 3 | Loops, indexes, addressing modes | `src/MULT.S` | LDA's many flavors, X and Y registers, comparison and branching, looping idioms |
-| 4 | Subroutines and the stack | `src/PRINTAT.S` | `JSR`/`RTS`, the stack page `$0100-$01FF`, passing arguments via zero page, reusable helpers |
-| 5 | Animation and timing | `src/BOUNCE.S` | The frame loop, delay loops, erase-before-draw, the vertical blank, two's-complement direction flips |
-| 6 | Keyboard input | `src/WALKER.S` | `$C000`/`$C010`, polling vs blocking, the IIe keymap, arrow keys, ESC |
-| 7 | Lo-res graphics | `src/SHAPES.S` | The `GR` soft switches, lo-res memory layout (it shares with text!), nibble color encoding, the 16-color palette |
-| 8 | The speaker and sound | `src/BEEP.S` | `$C030` clicks, square-wave generation, frequency vs duration, a tiny tone routine |
-| 9 | Hi-res graphics fundamentals | `src/HIRES.S` | The `$2000-$3FFF` and `$4000-$5FFF` hi-res pages, the truly weird 7-pixels-per-byte interleaved layout, why we use page 2 from a SYS file |
-| 10 | ProDOS MLI for file I/O | `src/LOAD.S` | The MLI dispatcher at `$BF00`, the `JSR / DFB cmd / DA params` calling convention, OPEN/READ/CLOSE |
-| 11 | Optimization tricks | `src/BENCH.S` | Page-boundary penalties, zero-page lookup tables, unrolled loops, self-modifying code, when each is worth it |
-| 12 | A complete small game | `src/PONG.S` | Game state, the main loop, score display, win/reset, putting input + animation + sound + lo-res together |
+| 2 | [The text screen](02-text-screen/README.md) | `src/FILL.S` | The `$0400-$07FF` text page, the interleaved row layout, screen holes, `BASCALC`, direct writes via `(BASL),Y` |
+| 3 | [Loops, indexes, addressing modes](03-loops/README.md) | `src/MULT.S` | LDA's many flavors, X and Y registers, comparison and branching, looping idioms |
+| 4 | [Subroutines and the stack](04-subroutines/README.md) | `src/PRINTAT.S` | `JSR`/`RTS`, the stack page `$0100-$01FF`, passing arguments via zero page, reusable helpers |
+| 5 | [Animation and timing](05-animation/README.md) | `src/BOUNCE.S` | The frame loop, delay loops, erase-before-draw, the vertical blank, two's-complement direction flips |
+| 6 | [Keyboard input](06-keyboard/README.md) | `src/WALKER.S` | `$C000`/`$C010`, polling vs blocking, the IIe keymap, arrow keys, ESC |
+| 7 | [Lo-res graphics](07-lores/README.md) | `src/SHAPES.S` | The `GR` soft switches, lo-res memory layout (it shares with text!), nibble color encoding, the 16-color palette |
+| 8 | [The speaker and sound](08-sound/README.md) | `src/BEEP.S` | `$C030` clicks, square-wave generation, frequency vs duration, a tiny tone routine |
+| 9 | [Hi-res graphics fundamentals](09-hires/README.md) | `src/HIRES.S` | The `$2000-$3FFF` and `$4000-$5FFF` hi-res pages, the truly weird 7-pixels-per-byte interleaved layout, why we use page 2 from a SYS file |
+| 10 | [ProDOS MLI for file I/O](10-prodos/README.md) | `src/LOAD.S` | The MLI dispatcher at `$BF00`, the `JSR / DFB cmd / DA params` calling convention, OPEN/READ/CLOSE |
+| 11 | [Optimization tricks](11-optimization/README.md) | `src/BENCH.S` | Page-boundary penalties, zero-page lookup tables, unrolled loops, self-modifying code, when each is worth it |
+| 12 | [A complete small game](12-game/README.md) | `src/PONG.S` | Game state, the main loop, score display, win/reset, putting input + animation + sound + lo-res together |
 
 ## Prerequisites
 
